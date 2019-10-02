@@ -2,11 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Main extends React.Component {
+class Grid extends React.Component {
     render() {
         return (
             <div>
-                Hello world!
+                Grid
+            </div>
+        );
+    }
+}
+
+class Main extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            generation: 0,
+        };
+    }
+    render() {
+        return (
+            <div>
+                <h1>The Gamie of Life</h1>
+                <Grid
+                />
+                <h2>Generations: {this.state.generation}</h2>
             </div>
         );
     }
